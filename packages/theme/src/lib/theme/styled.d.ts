@@ -140,7 +140,7 @@ declare module 'styled-components' {
 
             fontWeight: {
                 regular: string;
-                semiBold: string;
+                medium: string;
                 bold: string;
             };
         };
