@@ -2,8 +2,8 @@ import { DefaultTheme } from 'styled-components';
 import { colors, spacing, typography, elevation, layout } from './tokens';
 
 export const lightTheme: DefaultTheme = {
-    borderRadius: spacing.s8,
-    baseSpace: spacing.s24,
+    borderRadius: spacing[8],
+    baseSpace: spacing[24],
 
     colors: {
         primary: {
@@ -58,24 +58,24 @@ export const lightTheme: DefaultTheme = {
     },
 
     spacing: {
-        1: spacing.s1,
-        2: spacing.s2,
-        4: spacing.s4,
-        7: spacing.s7,
-        8: spacing.s8,
-        10: spacing.s10,
-        12: spacing.s12,
-        16: spacing.s16,
-        20: spacing.s20,
-        22: spacing.s22,
-        24: spacing.s24,
-        30: spacing.s30,
-        32: spacing.s32,
-        36: spacing.s36,
-        40: spacing.s40,
-        48: spacing.s48,
-        64: spacing.s64,
-        72: spacing.s72,
+        1: spacing[1],
+        2: spacing[2],
+        4: spacing[4],
+        7: spacing[7],
+        8: spacing[8],
+        12: spacing[12],
+        16: spacing[16],
+        20: spacing[20],
+        24: spacing[24],
+        32: spacing[32],
+        40: spacing[40],
+        48: spacing[48],
+        64: spacing[64],
+        72: spacing[72],
+        96: spacing[96],
+        128: spacing[128],
+        256: spacing[256],
+        512: spacing[512],
     },
 
     layout: {

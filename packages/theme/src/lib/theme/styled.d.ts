@@ -62,19 +62,20 @@ declare module 'styled-components' {
             4?: string;
             7?: string;
             8?: string;
-            10?: string;
             12?: string;
             16?: string;
             20?: string;
-            22?: string;
             24?: string;
             30?: string;
             32?: string;
-            36?: string;
             40?: string;
             48?: string;
             64?: string;
             72?: string;
+            96: string;
+            128: string;
+            256: string;
+            512: string;
         };
 
         layout?: {
