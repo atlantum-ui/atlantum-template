@@ -1,4 +1,5 @@
 import 'styled-components';
+import { spacing } from './tokens';
 
 declare module 'styled-components' {
     export interface DefaultTheme {
@@ -70,6 +71,7 @@ declare module 'styled-components' {
             32?: string;
             40?: string;
             48?: string;
+            56?: string;
             64?: string;
             72?: string;
             96: string;
