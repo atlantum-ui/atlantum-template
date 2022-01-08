@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import React, { FC, ReactNode, Fragment, MouseEventHandler } from 'react';
 
-export type Purpose = 'primary' | 'danger' | 'success' | 'warning' | 'info';
+export type Appearance = 'primary' | 'danger' | 'success' | 'warning' | 'info';
 
 export type Size = 'small' | 'default' | 'hero';
 
@@ -48,7 +48,7 @@ export interface ButtonProps {
     /**
      * Applying visual purpose to the button
      */
-    purpose?: Purpose;
+    appearance?: Appearance;
 
     /**
      * Applying visual appearance to the button
@@ -57,8 +57,12 @@ export interface ButtonProps {
 }
 
 const ButtonBase = styled.button`
+    /**
+     * By default, base button style inherit Secondary button visual.
+     * For more button styles, please discover Appearance type.
+     */
     outline: none;
-    border: none;
+    border: 1px solid ${(props) => props.theme.colors.neutral[100]};
     display: inline-block;
     font-family: ${(props) => props.theme.typography.family.base};
     font-weight: ${(props) => props.theme.typography.fontWeight.regular};
@@ -77,10 +81,14 @@ const ButtonBase = styled.button`
     &:active {
         color: ${(props) => props.theme.colors.neutral[25]};
         background-color: ${(props) => props.theme.colors.neutral[300]};
+        border-color: ${(props) => props.theme.colors.neutral[100]};
     }
 `;
 
 const StyledButton = styled(ButtonBase)<ButtonProps>`
+    /**
+    * Button sizes
+    */
     ${(props) =>
         props.size === 'small' &&
         `
@@ -108,23 +116,30 @@ const StyledButton = styled(ButtonBase)<ButtonProps>`
 
     `}
 
+
+    /**
+    * Button appearance styles
+    */
     ${(props) =>
-        props.purpose &&
+        props.appearance &&
         `
         color: ${props.theme.colors.neutral[25]};
-        background-color: ${props.theme.colors[props.purpose][200]};
+        background-color: ${props.theme.colors[props.appearance][200]};
+        border-color: ${props.theme.colors[props.appearance][200]};
         &:hover {
-        background-color: ${props.theme.colors[props.purpose][300]};
         color: ${props.theme.colors.neutral[25]};
+        background-color: ${props.theme.colors[props.appearance][300]};
+        border-color: ${props.theme.colors[props.appearance][300]};
     }
         &:focus {
-            box-shadow: 0 0 0 2px ${props.theme.colors[props.purpose][100]};
+            box-shadow: 0 0 0 2px ${props.theme.colors[props.appearance][100]};
             color: ${props.theme.colors.neutral[25]};
         }
 
         &:active {
-            background-color: ${props.theme.colors[props.purpose][400]};
             color: ${props.theme.colors.neutral[25]};
+            background-color: ${props.theme.colors[props.appearance][400]};
+            border-color: ${props.theme.colors[props.appearance][400]};
         }
 
     `}
@@ -134,9 +149,11 @@ const StyledButton = styled(ButtonBase)<ButtonProps>`
         `
          color: ${props.theme.colors.neutral[200]};
          background-color: ${props.theme.colors.neutral[50]};
+         border-color: ${props.theme.colors.neutral[50]};
          cursor: not-allowed;
          &:hover {
          background-color: ${props.theme.colors.neutral[50]};
+         border-color: ${props.theme.colors.neutral[50]};
 
     }
     `}
@@ -145,7 +162,7 @@ const StyledButton = styled(ButtonBase)<ButtonProps>`
 export function Button({
     children,
     size = 'default',
-    purpose,
+    appearance,
     disabled,
     onClick,
     leftIcon,
@@ -154,7 +171,7 @@ export function Button({
     return (
         <StyledButton
             size={size}
-            purpose={purpose}
+            appearance={appearance}
             onClick={onClick}
             disabled={disabled}
         >
