@@ -10,7 +10,7 @@
 -   Defined publishable component library with example Button component to show how theming works.
 -   Defined storybook with example Button component.
 
-## How it builds.
+## How it builds:
 
 -   Entire repository are based on great NX tool. This tool allows your team build and maintain large apps or libraries. More info <a href="https://nx.dev">here</a>.
 -   Library are based on React with Typescript.
@@ -26,7 +26,7 @@
   |____ ...
 ```
 
-## Useful commands
+## Useful commands:
 
 -   Generate new library inside project
 
