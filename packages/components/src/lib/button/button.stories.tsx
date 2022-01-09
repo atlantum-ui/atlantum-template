@@ -1,5 +1,5 @@
 import { Story, Meta } from '@storybook/react';
-import { Button } from '../../../../../dist/packages/components';
+import { Button } from './button';
 
 export default {
     component: Button,
@@ -8,5 +8,5 @@ export default {
 
 const Template: Story = (args) => <Button {...args}>I'm a Button</Button>;
 
-export const SecondaryButton = Template.bind({});
-SecondaryButton.args = {};
+export const ButtonSecondary = Template.bind({});
+ButtonSecondary.args = {};
