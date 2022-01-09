@@ -2,7 +2,6 @@
     "version": 2,
     "projects": {
         "components": "packages/components",
-        "components-e2e": "packages/components-e2e",
         "theme": "packages/theme"
     }
 }
