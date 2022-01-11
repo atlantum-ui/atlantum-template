@@ -13,10 +13,10 @@
         "lib": ["es2017", "dom"],
         "skipLibCheck": true,
         "skipDefaultLibCheck": true,
-        "baseUrl": "./at",
+        "baseUrl": ".",
         "paths": {
-            "@my-org/components": ["packages/components/src/index.ts"],
-            "@my-org/theme": ["packages/theme/src/index.ts"]
+            "@myorg/foundation": ["packages/foundation/src/index.ts"],
+            "@myorg/react": ["packages/react/src/index.ts"]
         }
     },
     "exclude": ["node_modules", "tmp"]

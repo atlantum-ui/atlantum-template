@@ -1,7 +1,0 @@
-{
-    "name": "@my-org/components",
-    "version": "0.0.1",
-    "peerDependencies": {
-        "@my-org/theme": "^0.1.0"
-    }
-}

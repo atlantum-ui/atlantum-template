@@ -1,8 +1,8 @@
 # Atlantum UI starting template
 
-<img src="./assets/bg-readme.png">
+<img src="./assets/bg-readme.png" alt="banner"/>
 
-### Hello, this is template repository for quick start building UI components based on Awesome Antlantum Design System Figma UI Kit, which you can get <a href="https://app.gumroad.com/arturivanov">here</a>.
+### Hello, this is template repository for quick start building UI components based on Awesome Atlantum Design System Figma UI Kit, which you can get <a href="https://app.gumroad.com/arturivanov">here</a>.
 
 ## Template includes:
 
@@ -10,7 +10,7 @@
 -   Defined publishable component library with example Button component to show how theming works.
 -   Defined storybook with example Button component.
 
-## How it builds:
+## How it builds.
 
 -   Entire repository are based on great NX tool. This tool allows your team build and maintain large apps or libraries. More info <a href="https://nx.dev">here</a>.
 -   Library are based on React with Typescript.
@@ -21,19 +21,19 @@
 ```
   ___ project root
   |__ packages (root derictory for libraris)
-  |   |___ components (main folder for react UI library) - this is publishable library for NPM
-  |   |___ theme (main folder for storing design tokens, themes) - this is publishable library for NPM
+  |   |___ react (main folder for react UI library, theming) - this is publishable library for NPM
+  |   |___ foundation (main folder for storing design tokens) - this is publishable library for NPM
   |____ ...
 ```
 
-## Useful commands:
+## Useful commands
 
 -   Generate new library inside project
 
 ```shell
   # Generate new library inside project
   # https://nx.dev/react/library
-  nx g @nrwl/react:library library-name --publishable --importPath=@my-org/library-name
+  nx g @nrwl/react:library library-name --publishable --importPath=@myorg/library-name
 ```
 
 -   Generate new component inside app or library
@@ -53,10 +53,10 @@
 
 ```shell
   # auto generate stories for components library
-  nx g @nrwl/react:stories --components
+  nx g @nrwl/react:stories --react
 ```
 
 ```shell
   # Run Storybook dev
-  nx run components:storybook
+  nx run react:storybook
 ```
